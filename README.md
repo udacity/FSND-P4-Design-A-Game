@@ -8,8 +8,15 @@
 1.  (Optional) Generate your client library(ies) with the endpoints tool.
  Deploy your application.
  
-##Endpoints Included:
  
+##Game Description:
+Guess a number is a simple guessing game. Each game begins with a random 'target'
+number between the minimum and maximum values provided, and a maximum number of
+'attempts'. 'Guesses' are sent to the `make_move` endpoint which will reply
+with either: 'too low', 'too high', 'you win', or 'game over' (if the maximum
+number of attempts is reached).
+
+##Endpoints Included:
  - **create_user**
     - Path: 'user'
     - Method: POST
@@ -67,7 +74,6 @@
     from a previously cached memcache key.
 
 ##Models Included:
-
  - **User**
     - Stores unique user_name.
     

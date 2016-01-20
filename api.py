@@ -5,22 +5,17 @@ from google.appengine.api import memcache
 from google.appengine.api import taskqueue
 
 from models import User, Game, Score
-from models import StringMessage, NewGameForm, GameForm, MakeMoveForm, ScoreForm,\
-    ScoreForms
+from models import StringMessage, NewGameForm, GameForm, MakeMoveForm, \
+    ScoreForm, ScoreForms
 from utils import get_by_urlsafe
 
 NEW_GAME_REQUEST = endpoints.ResourceContainer(NewGameForm)
 GET_GAME_REQUEST = endpoints.ResourceContainer(
-    message_types.VoidMessage,
-    urlsafe_game_key=messages.StringField(1),
-)
+        urlsafe_game_key=messages.StringField(1),)
 MAKE_MOVE_REQUEST = endpoints.ResourceContainer(
     MakeMoveForm,
-    urlsafe_game_key=messages.StringField(1),
-)
-USER_REQUEST = endpoints.ResourceContainer(
-    user_name=messages.StringField(1),
-)
+    urlsafe_game_key=messages.StringField(1),)
+USER_REQUEST = endpoints.ResourceContainer(user_name=messages.StringField(1),)
 
 MEMCACHE_MOVES_REMAINING = 'MOVES_REMAINING'
 
@@ -128,7 +123,6 @@ class GuessANumberApi(remote.Service):
                     'A User with that name does not exist!')
         scores = Score.query(Score.user == user.key)
         return ScoreForms(items=[score.to_form() for score in scores])
-
 
     @endpoints.method(response_message=StringMessage,
                       path='games/average_attempts',
