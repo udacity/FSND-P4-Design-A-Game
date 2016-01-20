@@ -16,6 +16,13 @@ number between the minimum and maximum values provided, and a maximum number of
 with either: 'too low', 'too high', 'you win', or 'game over' (if the maximum
 number of attempts is reached).
 
+##Files Included:
+ - api.py: Contains endpoints and game playing logic.
+ - app.yaml: App configuration.
+ - main.py: Handler for taskqueue handler.
+ - models.py: Entity and message definitions including helper methods.
+ - utils.py: Helper function for retrieving ndb.Models by urlsafe Key string.
+
 ##Endpoints Included:
  - **create_user**
     - Path: 'user'
