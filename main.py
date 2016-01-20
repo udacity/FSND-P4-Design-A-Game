@@ -15,12 +15,15 @@
 # limitations under the License.
 #
 import webapp2
+from api import GuessANumberApi
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        pass
-        #self.response.write('Hello world!')
+class UpdateAverageMovesRemaining(webapp2.RequestHandler):
+    def post(self):
+        """Update game listing announcement in memcache."""
+        GuessANumberApi._cache_average_attempts()
+        self.response.set_status(204)
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/tasks/cache_average_attempts', UpdateAverageMovesRemaining),
 ], debug=True)

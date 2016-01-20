@@ -10,7 +10,10 @@ handlers:
   upload: favicon\.ico
 
 - url: /_ah/spi/.*
-  script: resources.api
+  script: api.api
+
+- url: /tasks/cache_average_attempts
+  script: main.app
 
 libraries:
 - name: webapp2

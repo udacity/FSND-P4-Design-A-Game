@@ -25,7 +25,8 @@ Full Stack Nanodegree Project 4 Refresh
     - Returns: GameForm with initial game state.
     - Description: Creates a new Game. user_name provided must correspond to an
     existing user - will raise a NotFoundException if not. Min must be less than
-    max.
+    max. Also adds a task to a task queue to update the average moves remaining
+    for active games.
      
  - **get_game**
     - Path: 'game/{urlsafe_game_key}'
@@ -56,6 +57,14 @@ Full Stack Nanodegree Project 4 Refresh
     - Returns: ScoreForms. 
     - Description: Returns all Scores recorded by the provided player (unordered).
     Will raise a NotFoundException if the User does not exist.
+    
+ - **get_active_game_count**
+    - Path: 'games/active'
+    - Method: GET
+    - Parameters: None
+    - Returns: StringMessage
+    - Description: Gets the average number of attempts remaining for all games
+    from a previously cached memcache key.
 
 ## Models Included:
 
