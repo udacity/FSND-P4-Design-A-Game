@@ -34,10 +34,6 @@ platform-agnostic web apps using Google App Engine backed by Google Datastore.
     would not be required.
 
 ###Task 3:
- 
- Right now it
- 
-###Task 4:
 
 Implement additional endpoints. We'd like you to get additional practice working
 with the Datastore and performing queries and filters so we ask that you implement
