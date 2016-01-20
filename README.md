@@ -67,3 +67,23 @@ Full Stack Nanodegree Project 4 Refresh
     
  - **Score**
     - Records completed games. Associated with Users model via KeyProperty.
+    
+## Additional Endpoints Required:
+
+ - **get_user_games**
+    - Sometimes the urlsafe Key strings for games could be lost or garbled by client
+    software. Create an endpoint that returns all of a User's current games.
+    
+ - **get_high_scores**
+    - Right now the **get_scores** endpoint returns all scores. Create a new endpoint
+    that returns only 'winning' scores, with better scores coming first. Accept
+    and optional parameter `number_of_results` that limits the number of results
+    returned.
+    
+ - **get_user_ranking**
+    - Come up with a method for ranking the performance of each player. For
+    "Guess a Number" this could be the ratio of won/lost games (watch out for 
+    division by zero!) with ties broken by the average number of guesses.
+    - Create an endpoint that returns this player ranking. The results should 
+    include each Player's name and the 'performance' indicator (eg. win/loss
+    ratio).
