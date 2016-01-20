@@ -22,6 +22,21 @@ USER_REQUEST = endpoints.ResourceContainer(
 @endpoints.api(name='guess_a_number', version='v1')
 class GuessANumberApi(remote.Service):
     """Game API"""
+    @endpoints.method(request_message=USER_REQUEST,
+                      response_message=StringMessage,
+                      path='user',
+                      name='create_user',
+                      http_method='POST')
+    def create_user(self, request):
+        """Create a User. Requires a unique username"""
+        if User.query(User.name == request.user_name).get():
+            raise endpoints.ConflictException(
+                    'A User with that name already exists!')
+        user = User(name=request.user_name)
+        user.put()
+        return StringMessage(message='User {} created!'.format(
+                request.user_name))
+
     @endpoints.method(request_message=NEW_GAME_REQUEST,
                       response_message=GameForm,
                       path='game',
@@ -58,7 +73,7 @@ class GuessANumberApi(remote.Service):
                       response_message=GameForm,
                       path='game/{urlsafe_game_key}',
                       name='make_move',
-                      http_method='PUT')
+                      http_method='POST')
     def  make_move(self, request):
         """Makes a move. Returns a game state with message"""
         game = get_by_urlsafe(request.urlsafe_game_key, Game)
@@ -102,21 +117,6 @@ class GuessANumberApi(remote.Service):
                     'A User with that name does not exist!')
         scores = Score.query(Score.user == user.key)
         return ScoreForms(items=[score.to_form() for score in scores])
-
-    @endpoints.method(request_message=USER_REQUEST,
-                      response_message=StringMessage,
-                      path='user',
-                      name='create_user',
-                      http_method='POST')
-    def create_user(self, request):
-        """Create a User. Requires a unique username"""
-        if User.query(User.name == request.user_name).get():
-            raise endpoints.ConflictException(
-                    'A User with that name already exists!')
-        user = User(name=request.user_name)
-        user.put()
-        return StringMessage(message='User {} created!'.format(
-                request.user_name))
 
 
 api = endpoints.api_server([GuessANumberApi])
