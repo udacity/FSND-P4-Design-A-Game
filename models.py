@@ -50,6 +50,11 @@ class NewGameForm(messages.Message):
     max = messages.IntegerField(2, default=10)
     attempts = messages.IntegerField(3, default=5)
 
+class MakeMoveForm(messages.Message):
+    """Used to make a move in an existing game"""
+    guess = messages.IntegerField(1, required=True)
+
+
 class StringMessage(messages.Message):
     """StringMessage-- outbound (single) string message"""
     message = messages.StringField(1, required=True)
