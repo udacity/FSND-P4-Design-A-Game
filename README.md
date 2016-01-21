@@ -19,6 +19,7 @@ number of attempts is reached).
 ##Files Included:
  - api.py: Contains endpoints and game playing logic.
  - app.yaml: App configuration.
+ - cron.yaml: Cronjob configuration.
  - main.py: Handler for taskqueue handler.
  - models.py: Entity and message definitions including helper methods.
  - utils.py: Helper function for retrieving ndb.Models by urlsafe Key string.
@@ -82,7 +83,7 @@ number of attempts is reached).
 
 ##Models Included:
  - **User**
-    - Stores unique user_name.
+    - Stores unique user_name and (optional) email address.
     
  - **Game**
     - Stores unique game states. Associated with User model via KeyProperty.

@@ -87,5 +87,16 @@ for Guess a Number.
     - Adding this functionality will require some additional properties in the
     'Game' model along with a Form, and endpoint to present the data to the User.
 
-###Task 5:
-Implement an additional endpoint of your choice?
+###Task 5 (optional):
+In the skeleton Guess a Number project, a cron job and associated handler 
+have been created (see cron.yaml and main.py). This sends an hourly reminder email to 
+every User with an email address to try out 'Guess a Number'. Obviously, this is
+is probably annoying the Users.
+
+Modify the SendReminderEmail handler so that this reminder email is only sent
+if the user has incomplete games (or some other logic that makes sense to you).
+Make sure to update the message to reflect this.
+If you're feeling really ambitious you could try to implement even more complicated
+logic. For example:
+"If the User has not made a move in an active game for more than 12 hours, send
+a reminder email that includes the current game state."
