@@ -1,12 +1,12 @@
 import logging
 import endpoints
-from protorpc import remote, messages, message_types
+from protorpc import remote, messages
 from google.appengine.api import memcache
 from google.appengine.api import taskqueue
 
 from models import User, Game, Score
-from models import StringMessage, NewGameForm, GameForm, MakeMoveForm, \
-    ScoreForm, ScoreForms
+from models import StringMessage, NewGameForm, GameForm, MakeMoveForm,\
+    ScoreForms
 from utils import get_by_urlsafe
 
 NEW_GAME_REQUEST = endpoints.ResourceContainer(NewGameForm)
@@ -79,8 +79,8 @@ class GuessANumberApi(remote.Service):
                       response_message=GameForm,
                       path='game/{urlsafe_game_key}',
                       name='make_move',
-                      http_method='POST')
-    def  make_move(self, request):
+                      http_method='PUT')
+    def make_move(self, request):
         """Makes a move. Returns a game state with message"""
         game = get_by_urlsafe(request.urlsafe_game_key, Game)
         if game.game_over:

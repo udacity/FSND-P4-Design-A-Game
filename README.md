@@ -52,7 +52,7 @@ number of attempts is reached).
     
  - **make_move**
     - Path: 'game/{urlsafe_game_key}'
-    - Method: POST
+    - Method: PUT
     - Parameters: urlsafe_game_key, guess
     - Returns: GameForm with new game state.
     - Description: Accepts a 'guess' and returns the updated state of the game.

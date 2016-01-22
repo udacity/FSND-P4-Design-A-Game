@@ -97,16 +97,25 @@ for Guess a Number.
     - Adding this functionality will require some additional properties in the
     'Game' model along with a Form, and endpoint to present the data to the User.
 
-###Task 5 (optional):
+###Task 5:
 In the skeleton Guess a Number project, a cron job and associated handler 
 have been created (see cron.yaml and main.py). This sends an hourly reminder email to 
 every User with an email address to try out 'Guess a Number'. Obviously, this is
 probably annoying the Users.
 
-Modify the SendReminderEmail handler so that this reminder email is only sent
-if the user has incomplete games (or some other logic that makes sense to you).
+Modify the SendReminderEmail handler so that this reminder email is only sent to
+users that have incomplete games (or some other logic that makes sense to you).
 Make sure to update the message to reflect this.
 If you're feeling really ambitious you could try to implement even more complicated
-logic. For example:
-"If the User has not made a move in an active game for more than 12 hours, send
-a reminder email that includes the current game state."
+logic. For example: "If the User has not made a move in an active game for more 
+than 12 hours, send a reminder email that includes the current game state."
+
+###Task 6 (optional):
+If you created a two-player game in Task 2, you might want to try implementing
+a notification system!
+When one user 'makes' a move, add a task to the task queue to notify the User's
+opponent that its their turn. You can use the `SendReminderEmail` handler in
+main.py as a template. However, remember that you will need to pass parameters
+to identify the game and User that should receive the reminder. Don't forget
+ton update `app.yaml` with the new Handler listing. Finally, consult Google
+App Engine documentation for [Using Push Queues in Python](https://cloud.google.com/appengine/docs/python/taskqueue/overview-push).
