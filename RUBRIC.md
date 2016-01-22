@@ -4,7 +4,7 @@
 
 - **New game implemented**
     - Meets Specification: A new type of game is implemented with additional
-    game logic or features (such as 2-player games).
+    game logic or features (such as 2-player games). New models may be required.
     - Meets Specification: "Illegal" moves are handled gracefully by the API. For
     example, if implementing Tic-Tac-Toe, if a User tries to play a square that 
     has already been filled - the server will respond with an error message
@@ -45,7 +45,7 @@
     the application locally.
     
 - **Task Queues**
-    - Exceeds Specification: The email reminder cronjob handler is modified so 
+    - Meets Specification: The email reminder cronjob handler is modified so 
     that only Users 'needing' a reminder (actual logic up to the student) is
     modified.
     

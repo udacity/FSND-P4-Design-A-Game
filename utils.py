@@ -26,6 +26,8 @@ def get_by_urlsafe(urlsafe, model):
             raise
 
     entity = key.get()
+    if not entity:
+        return None
     if not isinstance(entity, model):
         raise ValueError('Incorrect Kind')
     return entity

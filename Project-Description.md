@@ -51,7 +51,7 @@ the new game logic?
 We'd like you to get additional practice working with the Datastore and 
 performing queries and filters so we ask that you implement several additional 
 endpoints. You'll want to customize them somewhat to fit the type of 
-game you implement.
+game you implement. Ensure that each endpoint uses the correct HTTP Method.
 
 Ensure that the endpoints are documented in your README just like the ones
 for Guess a Number.
@@ -107,8 +107,9 @@ Modify the SendReminderEmail handler so that this reminder email is only sent to
 users that have incomplete games (or some other logic that makes sense to you).
 Make sure to update the message to reflect this.
 If you're feeling really ambitious you could try to implement even more complicated
-logic. For example: "If the User has not made a move in an active game for more 
-than 12 hours, send a reminder email that includes the current game state."
+logic or functionality. For example: "If the User has not made a move in an 
+active game for more than 12 hours, send a reminder email that includes the 
+current game state." 
 
 ###Task 6 (optional):
 If you created a two-player game in Task 2, you might want to try implementing
