@@ -52,7 +52,7 @@ number of attempts is reached).
     
  - **make_move**
     - Path: 'game/{urlsafe_game_key}'
-    - Method: GET
+    - Method: POST
     - Parameters: urlsafe_game_key, guess
     - Returns: GameForm with new game state.
     - Description: Accepts a 'guess' and returns the updated state of the game.
@@ -91,3 +91,18 @@ number of attempts is reached).
  - **Score**
     - Records completed games. Associated with Users model via KeyProperty.
     
+##Forms Included:
+ - **GameForm**
+    - Representation of a Game's state (urlsafe_key, attempts_remaining,
+    game_over flag, message, user_name).
+ - **NewGameForm**
+    - Used to create a new game (user_name, min, max, attempts)
+ - **MakeMoveForm**
+    - Inbound make move form (guess).
+ - **ScoreForm**
+    - Representation of a completed game's Score (user_name, date, won flag,
+    guesses).
+ - **ScoreForms**
+    - Multiple ScoreForm container.
+ - **StringMessage**
+    - General purpose String container.

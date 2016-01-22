@@ -25,32 +25,35 @@ platform-agnostic apps using Google App Engine backed by Google Datastore.
  updated and stored according to the rules.
  
  Some ideas you may want to consider:
-    - Hangman, Tic-Tac-Toe, Battleship, mancala, yahtzee, solitaire.
-    - 2 player games. For example, Tic-Tac-Toe could be implemented as a 
-    single player game (in which case you'll want to write an AI for the User
-    to play against). Or, you could allow for two players to play against 
-    each other.  In the case of Tic-Tac-Toe this would make the endpoints and 
-    data structure somewhat more complicated, but it would simplify the coding 
-    because an "AI" would not be required.
-    
+
+- Hangman, Tic-Tac-Toe, Battleship, mancala, yahtzee, solitaire.
+- 2 player games. For example, Tic-Tac-Toe could be implemented as a 
+single player game (in which case you'll want to write an AI for the User
+to play against). Or, you could allow for two players to play against 
+each other.  In the case of Tic-Tac-Toe this would make the endpoints and 
+data structure somewhat more complicated, but it would simplify the coding 
+because an "AI" would not be required.
+
 Be sure to document your game. Your README file should include instructions for
 playing the game, and detailed descriptions of each endpoint (remember, you 
 are documenting an API that another programmer may want to use as the basis for
-a web or mobile app). You may follow the format of 'Guess a Number'.
+a web or mobile app). An api user should *not* need to read the source code
+to understand how to use it. You may follow the format of 'Guess a Number'.
 
 ###Task 3:
  Document your design decisions by answering the following questions:
-    - What additional fields did you add to your models and why?
-    - What were some of the trade-offs or struggles you faced when implementing
-      the new game logic?
+   
+- What additional fields did you add to your models and why?
+- What were some of the trade-offs or struggles you faced when implementing
+the new game logic?
        
 ###Task 4:
-Implement additional endpoints. We'd like you to get additional practice working
-with the Datastore and performing queries and filters so we ask that you implement
-these additional endpoints. You'll want to customize them somewhat to fit the
-type of game you implement.
+We'd like you to get additional practice working with the Datastore and 
+performing queries and filters so we ask that you implement several additional 
+endpoints. You'll want to customize them somewhat to fit the type of 
+game you implement.
 
-Make sure that the endpoints are documented in your README just like the ones
+Ensure that the endpoints are documented in your README just like the ones
 for Guess a Number.
 
  - **get_user_games**
@@ -59,10 +62,17 @@ for Guess a Number.
     - You may want to modify the `User` and `Game` models. Hint: it might make
     sense for each game to be a `descendant` of a `User`.
     
+ - **cancel_game**
+    - Occasionally a User want to cancel a game they are playing. Create an endpoint
+     that allows user to cancel a game. You could implement this by deleting the
+     Game model itself, or add a Boolean field such as 'cancelled' to the model.
+     Ensure that Users are not permitted to remove *completed* games - we don't
+     want them manipulating their high score history!
+    
  - **get_high_scores**
     - Right now the **get_scores** endpoint returns all scores. Create a new endpoint
     that returns only 'winning' scores, with better scores coming first. Accept
-    and optional parameter `number_of_results` that limits the number of results
+    an optional parameter `number_of_results` that limits the number of results
     returned.
     
  - **get_user_ranking**
@@ -91,7 +101,7 @@ for Guess a Number.
 In the skeleton Guess a Number project, a cron job and associated handler 
 have been created (see cron.yaml and main.py). This sends an hourly reminder email to 
 every User with an email address to try out 'Guess a Number'. Obviously, this is
-is probably annoying the Users.
+probably annoying the Users.
 
 Modify the SendReminderEmail handler so that this reminder email is only sent
 if the user has incomplete games (or some other logic that makes sense to you).
