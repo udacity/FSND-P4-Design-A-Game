@@ -26,7 +26,6 @@ class SendReminderEmail(webapp2.RequestHandler):
     def get(self):
         """Send a reminder email to each User with an email about games.
         Called every hour using a cron job"""
-        logging.debug('herererereer')
         users = User.query(User.email != None)
         for user in users:
             subject = 'This is a reminder!'

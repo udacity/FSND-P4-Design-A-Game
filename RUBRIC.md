@@ -17,15 +17,17 @@
     understand how to use the API without reading the source code.
     
 - **New endpoints created**
-    - Meets Specification: `get_user_games`, `get_high_scores` and `get_user_rankings`
-    endpoints are created with score-keeping logic and rankings which is consistent
-    with the new type of game created.
+    - Meets Specification: required endpoints are implemented with behavior that
+    follows the project description.
     - Meets Specification: `get_game_history` is created. The output should be
     sufficient to 'replay' the game from start to finish and get the same result
     (notwithstanding any randomization inherent to the game).
     
 - **New endpoints use correct http methods**
     - Meets Specification: Additional endpoints make use of sensible http methods.
+    
+- **Resource Containers**
+    - Meets Specification: All endpoints make use of sensible Resource Containers.
 
 - **New endpoints are documented**
     - Meets Specification: Additional endpoints behavior is explained, and
@@ -41,4 +43,9 @@
 - **Documentation**
     - Meets Specification: A README file is included with steps necessary to run
     the application locally.
+    
+- **Task Queues**
+    - Exceeds Specification: The email reminder cronjob handler is modified so 
+    that only Users 'needing' a reminder (actual logic up to the student) is
+    modified.
     
