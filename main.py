@@ -22,6 +22,7 @@ from api import GuessANumberApi
 
 from models import User
 
+
 class SendReminderEmail(webapp2.RequestHandler):
     def get(self):
         """Send a reminder email to each User with an email about games.
@@ -38,7 +39,6 @@ class SendReminderEmail(webapp2.RequestHandler):
                            user.email,
                            subject,
                            body)
-
 
 
 class UpdateAverageMovesRemaining(webapp2.RequestHandler):

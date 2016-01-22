@@ -77,8 +77,8 @@ for Guess a Number.
     
  - **get_user_ranking**
     - Come up with a method for ranking the performance of each player. For
-    "Guess a Number" this could be the ratio of won/lost games (watch out for 
-    division by zero!) with ties broken by the average number of guesses.
+    "Guess a Number" this could be by winning percentage with ties broken by the 
+    average number of guesses.
     - Create an endpoint that returns this player ranking. The results should 
     include each Player's name and the 'performance' indicator (eg. win/loss
     ratio).
