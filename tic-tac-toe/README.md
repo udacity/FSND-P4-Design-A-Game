@@ -89,6 +89,7 @@ The board is represented as a 1-D list of squares with indexes as follows:
 ##Models Included:
  - **User**
     - Stores unique user_name and (optional) email address.
+    - Also keeps track of wins and total_played.
     
  - **Game**
     - Stores unique game states. Associated with User models via KeyProperties
@@ -110,6 +111,10 @@ The board is represented as a 1-D list of squares with indexes as follows:
     - Representation of a completed game's Score (date, winner, loser).
  - **ScoreForms**
     - Multiple ScoreForm container.
+ - **UserForm**
+    - Representation of User. Includes winning percentage
+ - **UserForms**
+    - Container for one or more UserForm.
  - **StringMessage**
     - General purpose String container.
     
