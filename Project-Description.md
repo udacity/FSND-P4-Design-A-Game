@@ -58,7 +58,7 @@ for Guess a Number.
 
  - **get_user_games**
     - Sometimes the urlsafe Key strings for games could be lost or garbled by client
-    software. Create an endpoint that returns all of a User's current games.
+    software. Create an endpoint that returns all of a User's active games.
     - You may want to modify the `User` and `Game` models. Hint: it might make
     sense for each game to be a `descendant` of a `User`.
     
@@ -74,8 +74,9 @@ for Guess a Number.
     that returns only 'winning' scores, with better scores coming first. Accept
     an optional parameter `number_of_results` that limits the number of results
     returned.
+    - If you choose to implement a 2-player game this endpoint is not required.
     
- - **get_user_ranking**
+ - **get_user_rankings**
     - Come up with a method for ranking the performance of each player. For
     "Guess a Number" this could be by winning percentage with ties broken by the 
     average number of guesses.
