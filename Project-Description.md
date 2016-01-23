@@ -34,6 +34,17 @@ each other.  In the case of Tic-Tac-Toe this would make the endpoints and
 data structure somewhat more complicated, but it would simplify the coding 
 because an "AI" would not be required.
 
+Define what a "score" for each game will be (beyond just won/lost for single
+player games) and keep this data in your database.
+For example in 'Guess a Number' the Score model stores the number of guesses
+taken before the number was found. Lower guesses would be better - this
+scoring system could also be extended to take into account the original range of 
+numbers as well! 
+
+Note: if you're creating a two-player game you might want to
+just record *who* won each game, although you could store additional data if
+you like.
+
 Be sure to document your game. Your README file should include instructions for
 playing the game, and detailed descriptions of each endpoint (remember, you 
 are documenting an API that another programmer may want to use as the basis for
@@ -70,11 +81,11 @@ for Guess a Number.
      want them manipulating their high score history!
     
  - **get_high_scores**
-    - Right now the **get_scores** endpoint returns all scores. Create a new endpoint
-    that returns only 'winning' scores, with better scores coming first. Accept
-    an optional parameter `number_of_results` that limits the number of results
-    returned.
-    - If you choose to implement a 2-player game this endpoint is not required.
+    - Remember how you defined a score in Task 2? Now we will use that to generate
+     a list of high scores in descending order - a leader-board!
+    - Accept an optional parameter `number_of_results` that limits the number of 
+    results returned.
+    - Note: If you choose to implement a 2-player game this endpoint is not required.
     
  - **get_user_rankings**
     - Come up with a method for ranking the performance of each player. For
