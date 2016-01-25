@@ -63,15 +63,14 @@ We'd like you to get additional practice working with the Datastore and
 performing queries and filters so we ask that you implement several additional 
 endpoints. You'll want to customize them somewhat to fit the type of 
 game you implement. Ensure that each endpoint uses the correct HTTP Method.
-
-Ensure that the endpoints are documented in your README just like the ones
+Finally, these endpoints should be documented in your README just like the ones
 for Guess a Number.
 
  - **get_user_games**
     - Sometimes the urlsafe Key strings for games could be lost or garbled by client
     software. Create an endpoint that returns all of a User's active games.
-    - You may want to modify the `User` and `Game` models. Hint: it might make
-    sense for each game to be a `descendant` of a `User`.
+    - You may want to modify the `User` and `Game` models to simplify this type
+    of query. Hint: it might make sense for each game to be a `descendant` of a `User`.
     
  - **cancel_game**
     - Occasionally a User want to cancel a game they are playing. Create an endpoint
@@ -126,9 +125,9 @@ current game state."
 ###Task 6 (optional):
 If you created a two-player game in Task 2, you might want to try implementing
 a notification system!
-When one user 'makes' a move, add a task to the task queue to notify the User's
-opponent that its their turn. You can use the `SendReminderEmail` handler in
+When one user makes a move, add a task to the task queue to notify the User's
+opponent that it's their turn. You can use the `SendReminderEmail` handler in
 main.py as a template. However, remember that you will need to pass parameters
 to identify the game and User that should receive the reminder. Don't forget
-ton update `app.yaml` with the new Handler listing. Finally, consult Google
+to update `app.yaml` with the new Handler listing. Finally, consult Google
 App Engine documentation for [Using Push Queues in Python](https://cloud.google.com/appengine/docs/python/taskqueue/overview-push).
