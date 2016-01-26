@@ -4,9 +4,10 @@
 1.  Update the value of application in app.yaml to the app ID you have registered
  in the App Engine admin console and would like to use to host your instance of this sample.
 1.  Run the app with the devserver using dev_appserver.py DIR, and ensure it's
- running by visiting your local server's address (by default localhost:8080.)
+ running by visiting the API Explorer - by default localhost:8080/_ah/api/explorer.
 1.  (Optional) Generate your client library(ies) with the endpoints tool.
  Deploy your application.
+ 
  
  
 ##Game Description:
@@ -28,7 +29,7 @@ number of attempts is reached).
  - **create_user**
     - Path: 'user'
     - Method: POST
-    - Parameters: user_name
+    - Parameters: user_name, email (optional)
     - Returns: Message confirming creation of the User.
     - Description: Creates a new User. user_name provided must be unique. Will 
     raise a ConflictException if a User with that user_name already exists.

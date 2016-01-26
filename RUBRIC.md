@@ -26,12 +26,12 @@
 - **New endpoints use correct http methods**
     - Meets Specification: Additional endpoints make use of sensible http methods.
     
-- **Resource Containers**
-    - Meets Specification: All endpoints make use of sensible Resource Containers.
-
 - **New endpoints are documented**
     - Meets Specification: Additional endpoints behavior is explained, and
     parameters and return variables detailed.
+
+- **Resource Containers**
+    - Meets Specification: All endpoints make use of sensible Resource Containers.
 
 - **Code Readability**
     - Meets Specification: Code formatting follows consistent rules for variable,
