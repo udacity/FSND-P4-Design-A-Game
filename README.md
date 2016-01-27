@@ -16,6 +16,9 @@ number between the minimum and maximum values provided, and a maximum number of
 'attempts'. 'Guesses' are sent to the `make_move` endpoint which will reply
 with either: 'too low', 'too high', 'you win', or 'game over' (if the maximum
 number of attempts is reached).
+Many different Guess a Number games can be played by many different Users at any
+given time. Each game can be retrieved or played by using the path parameter
+`urlsafe_game_key`.
 
 ##Files Included:
  - api.py: Contains endpoints and game playing logic.

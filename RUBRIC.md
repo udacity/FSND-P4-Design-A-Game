@@ -38,7 +38,7 @@
     function, class etc. naming conventions. Line length is not excessive and
     white-space is used appropriately to improve readability.
     - Meets Specification: Functions and methods include descriptive docstrings,
-    and code that is not intuitively understandable includes comments.
+    and code that is not immediately understandable includes comments.
      
 - **Documentation**
     - Meets Specification: A README file is included with steps necessary to run
