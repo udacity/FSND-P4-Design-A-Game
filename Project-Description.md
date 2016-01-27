@@ -18,7 +18,7 @@ platform-agnostic apps using Google App Engine backed by Google Datastore.
  
 ###Task 2:
   Come up with a new game to implement! This could be a guessing game (like Guess
- a Number) such as Hangman, or something more complex like Tic-Tac-Toe. Make
+ a Number) such as Hangman, or a simple board game like Tic-Tac-Toe. Make
  sure that the existing endpoints work with the new game - you'll need to modify
  the models, forms, and resource containers, but the general structure should stay
  roughly the same so that Games can be created, moves played, and the game state
@@ -38,8 +38,8 @@ Define what a "score" for each game will be (beyond just won/lost for single
 player games) and keep this data in your database.
 For example in 'Guess a Number' the Score model stores the number of guesses
 taken before the number was found. Lower guesses would be better - this
-scoring system could also be extended to take into account the original range of 
-numbers as well! 
+scoring system could also be extended to take into account how wide the original
+range of numbers was as well! 
 
 Note: if you're creating a two-player game you might want to
 just record *who* won each game, although you could store additional data if
