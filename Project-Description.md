@@ -18,10 +18,9 @@ platform-agnostic apps using Google App Engine backed by Google Datastore.
  
 ###Task 2:
   Come up with a new game to implement! This could be a more advanced guessing 
-  game (like Guess a Number) such as Hangman, or a simple board game like 
-  Tic-Tac-Toe. Implementing a copy or port of Guess a Number (Guess 2 Numbers/
-  Guess a Letter/Guess a Word etc.) will not be acceptable. We want you to be 
-  creative!
+  game such as Hangman, or a simple board game like Tic-Tac-Toe. Implementing 
+  a copy or port of Guess a Number (Guess 2 Numbers/Guess a Letter/Guess a Word 
+  etc.) will not be acceptable. We want you to be creative!
   
   Make sure that the existing endpoints work with the new game - you'll need to 
   modify the models, forms, and resource containers, but the general structure 
