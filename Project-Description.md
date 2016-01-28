@@ -71,10 +71,11 @@ Finally, these endpoints should be documented in your README just like the ones
 for Guess a Number.
 
  - **get_user_games**
-    - Sometimes the urlsafe Key strings for games could be lost or garbled by client
-    software. Create an endpoint that returns all of a User's active games.
+    - Users may want to quickly find all of the games that they are currently
+    playing. Create an endpoint that returns all of a User's active games.
     - You may want to modify the `User` and `Game` models to simplify this type
-    of query. **Hint:** it might make sense for each game to be a `descendant` of a `User`.
+    of query. **Hint:** it might make sense for each game to be a `descendant` 
+    of a `User`.
     
  - **cancel_game**
     - Occasionally a User may want to cancel a game they are playing. Create an endpoint
