@@ -14,11 +14,11 @@ platform-agnostic apps using Google App Engine backed by Google Datastore.
  code and documentation, and test the endpoints. Make sure you understand 
  how different entities are created, how they fit together, and the overall flow.
  Create a User or two and play a few games. Make sure to take a look at the admin
- Datastore viewer (usually localhost:8000) to check out the various entities.
+ Datastore viewer (usually <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>) to check out the various entities.
  
 ###Task 2:
   Come up with a new game to implement! This could be a more advanced guessing 
-  game such as Hangman, or a simple board game like Tic-Tac-Toe. Implementing 
+  game such as Hangman, or a simple board game like Tic-Tac-Toe. **Note:** Implementing 
   a copy or port of Guess a Number (Guess 2 Numbers/Guess a Letter/Guess a Word 
   etc.) will not be acceptable. We want you to be creative!
   
@@ -52,12 +52,13 @@ Be sure to document your game. Your README file should include instructions for
 playing the game, and detailed descriptions of each endpoint (remember, you 
 are documenting an API that another programmer may want to use as the basis for
 a web or mobile app). An api user should *not* need to read the source code
-to understand how to use it. You may follow the format of 'Guess a Number'.
+to understand how to use it. You may follow the format of 'Guess a Number'
+for your README.
 
 ###Task 3:
  Document your design decisions by answering the following questions:
    
-- What additional fields did you add to your models and why?
+- What additional properties did you add to your models and why?
 - What were some of the trade-offs or struggles you faced when implementing
 the new game logic?
        
@@ -65,7 +66,7 @@ the new game logic?
 We'd like you to get additional practice working with the Datastore and 
 performing queries and filters so we ask that you implement several additional 
 endpoints. You'll want to customize them somewhat to fit the type of 
-game you implement. Ensure that each endpoint uses the correct HTTP Method.
+game you implement. **Ensure that each endpoint uses the correct HTTP Method.**
 Finally, these endpoints should be documented in your README just like the ones
 for Guess a Number.
 
@@ -73,11 +74,11 @@ for Guess a Number.
     - Sometimes the urlsafe Key strings for games could be lost or garbled by client
     software. Create an endpoint that returns all of a User's active games.
     - You may want to modify the `User` and `Game` models to simplify this type
-    of query. Hint: it might make sense for each game to be a `descendant` of a `User`.
+    of query. **Hint:** it might make sense for each game to be a `descendant` of a `User`.
     
  - **cancel_game**
-    - Occasionally a User want to cancel a game they are playing. Create an endpoint
-     that allows user to cancel a game. You could implement this by deleting the
+    - Occasionally a User may want to cancel a game they are playing. Create an endpoint
+     that allows users to cancel a game. You could implement this by deleting the
      Game model itself, or add a Boolean field such as 'cancelled' to the model.
      Ensure that Users are not permitted to remove *completed* games - we don't
      want them manipulating their high score history!
@@ -100,7 +101,7 @@ for Guess a Number.
  - **get_game_history**
     - Your API Users may want to be able to see a 'history' of moves for each game.
     - For example, Chess uses a format called 
-    [PGN](https://en.wikipedia.org/wiki/Portable_Game_Notation) which allows
+    <a href="https://en.wikipedia.org/wiki/Portable_Game_Notation" target="_blank">PGN</a>) which allows
     any game to be replayed and watched move by move.
     - Add the capability for a Game's history to be presented in a similar way.
     For example: If a User made played 'Guess a Number' with the moves:
@@ -133,4 +134,4 @@ opponent that it's their turn. You can use the `SendReminderEmail` handler in
 main.py as a template. However, remember that you will need to pass parameters
 to identify the game and User that should receive the reminder. Don't forget
 to update `app.yaml` with the new Handler listing. Finally, consult Google
-App Engine documentation for [Using Push Queues in Python](https://cloud.google.com/appengine/docs/python/taskqueue/overview-push).
+App Engine documentation for <a href="https://cloud.google.com/appengine/docs/python/taskqueue/overview-push" target="_blank">Using Push Queues in Python</a>.
