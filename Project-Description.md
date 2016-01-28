@@ -17,16 +17,20 @@ platform-agnostic apps using Google App Engine backed by Google Datastore.
  Datastore viewer (usually localhost:8000) to check out the various entities.
  
 ###Task 2:
-  Come up with a new game to implement! This could be a guessing game (like Guess
- a Number) such as Hangman, or a simple board game like Tic-Tac-Toe. Make
- sure that the existing endpoints work with the new game - you'll need to modify
- the models, forms, and resource containers, but the general structure should stay
- roughly the same so that Games can be created, moves played, and the game state
- updated and stored according to the rules.
+  Come up with a new game to implement! This could be a more advanced guessing 
+  game (like Guess a Number) such as Hangman, or a simple board game like 
+  Tic-Tac-Toe. Implementing a copy or port of Guess a Number (Guess 2 Numbers/
+  Guess a Letter/Guess a Word etc.) will not be acceptable. We want you to be 
+  creative!
+  
+  Make sure that the existing endpoints work with the new game - you'll need to 
+  modify the models, forms, and resource containers, but the general structure 
+  should stay roughly the same so that Games can be created, moves played, and 
+  the game state updated and stored according to the rules.
  
  Some ideas you may want to consider:
 
-- Hangman, Tic-Tac-Toe, Battleship, mancala, yahtzee, solitaire.
+- Hangman, Tic-Tac-Toe, Battleship, mancala, yahtzee, solitaire, Boggle, War.
 - 2 player games. For example, Tic-Tac-Toe could be implemented as a 
 single player game (in which case you'll want to write an AI for the User
 to play against). Or, you could allow for two players to play against 

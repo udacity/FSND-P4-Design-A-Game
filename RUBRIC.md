@@ -4,7 +4,9 @@
 
 - **New game implemented**
     - Meets Specification: A new type of game is implemented with additional
-    game logic or features (such as 2-player games). New models may be required.
+    game logic or features (such as 2-player games). The new game is not a copy
+    of Guess a Number. If it is a guessing game like Hangman, additional features
+    are included (partial reveal of the solution over time).
     - Meets Specification: "Illegal" moves are handled gracefully by the API. For
     example, if implementing Tic-Tac-Toe, if a User tries to play a square that 
     has already been filled - the server will respond with an error message
