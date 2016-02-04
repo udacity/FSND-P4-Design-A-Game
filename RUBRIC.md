@@ -1,8 +1,8 @@
-- **App Architecture**
+- **API Architecture**
     - Meets Specification: App is architected as a Web Service API.
     - Meets Specification: App supports a variety of possible front-end clients.
 
-- **New game implemented**
+- **API Implementation**
     - Meets Specification: A new type of game is implemented with additional
     game logic or features (such as 2-player games). The new game is not a copy
     of Guess a Number. If it is a guessing game like Hangman, additional features
@@ -13,24 +13,23 @@
     explaining that the move is illegal. There should be no 'Internal Server
     Errors' so long as User input is otherwise properly formed.
     
-- **New game documented**
+- **Documentation**
+    - Meets Specification: A README file is included with steps necessary to run
+    the application locally.
     - Meets Specification: The new game is documented in a README.md file, with
-    explanation of the rules and score-keeping so that it is possible to
-    understand how to use the API without reading the source code.
+    explanation of the rules and score-keeping.
+    - Meets Specification: The API is documented so that users can understand how to use the API without reading the source code.
+    - Meets Specificaiton: The student has meaningfully reflected on their design decisions and recorded their reflections in Design.txt.
     
-- **New endpoints created**
+- **New Endpoints Created**
     - Meets Specification: required endpoints are implemented with behavior that
     follows the project description.
     - Meets Specification: `get_game_history` is created. The output should be
     sufficient to 'replay' the game from start to finish and get the same result
-    (notwithstanding any randomization inherent to the game).
+    (notwithstanding any randomization inherent to the game). <todo is this redundant? does the previoius item cover this?)
     
-- **New endpoints use correct http methods**
-    - Meets Specification: Additional endpoints make use of sensible http methods.
-    
-- **New endpoints are documented**
-    - Meets Specification: Additional endpoints behavior is explained, and
-    parameters and return variables detailed.
+- **Appropriate use of HTTP Methods**
+    - Meets Specification: Additional endpoints make use of appropriate HTTP methods.
 
 - **Resource Containers**
     - Meets Specification: All endpoints make use of sensible Resource Containers.
@@ -42,10 +41,6 @@
     - Meets Specification: Functions and methods include descriptive docstrings,
     and code that is not immediately understandable includes comments.
      
-- **Documentation**
-    - Meets Specification: A README file is included with steps necessary to run
-    the application locally.
-    
 - **Task Queues**
     - Meets Specification: The email reminder cronjob handler is modified so 
     that only Users 'needing' a reminder (actual logic up to the student) is
