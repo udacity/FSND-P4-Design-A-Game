@@ -14,7 +14,7 @@
     - Meets Specification: A README file is included with steps necessary to run the application locally.
     - Meets Specification: The new game is documented in a README.md file, with explanation of the rules and score-keeping.
     - Meets Specification: The API is documented so that users can understand how to use the API without reading the source code.
-    - Meets Specificaiton: The student has meaningfully reflected on their design decisions and recorded their reflections in README.md.
+    - Meets Specification: The student has meaningfully reflected on their design decisions and recorded their reflections in README.md.
     
 - **New Endpoints Created**
     - Meets Specification: required endpoints are implemented with behavior that follows the project description.
