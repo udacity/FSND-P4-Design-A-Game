@@ -1,11 +1,11 @@
-#Game API Project Overview
+# Game API Project Overview
 In the Developing Scalable Apps with Python course you learned how to write platform-agnostic apps using Google App Engine backed by Google Datastore.
  
 In this project you will use these skills to develop your own game!
 You will write an API with endpoints that will allow anyone to develop a front-end for your game.
 Since you aren't required to write a front-end you can use API explorer to test your API.Let's get started!
  
-###Task 1: Explore the Architecture
+### Task 1: Explore the Architecture
 Get the skeleton 'Guess a Number' application up and running.
 Read through the code and documentation, and test the endpoints with API explorer.
 Make sure you understand how different entities are created, how they work together, and the overall flow of a game.
@@ -13,7 +13,7 @@ Create a `User` or two and play a few games.
 Make sure to take a look at the admin Datastore viewer to check out the various entities.
 The datastore is typically at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>, but you may need to access it on another port.
 
-###Task 2: Implement Your Own Game
+### Task 2: Implement Your Own Game
 Come up with a new game to implement!
 This could be a more advanced guessing game such as Hangman, or a simple two player game like Tic-Tac-Toe.
 **Note:** Implementing a copy of Guess a Number will not be acceptable, we want you to be creative!
@@ -44,27 +44,8 @@ For example in 'Guess a Number' the Score model stores the number of guesses tak
 Two player games do not need to implement this feature.
 
 You can record any other data that you think is interesting or relevant to your particular game.
-
-#### README and API Documentation
-Be sure to document your game. Your README file should include:
-1) Instructions for playing the game
-2) Detailed descriptions of each endpoint
-
-Remember, you are documenting an API that another programmer may want to use as the basis for a web or mobile app.
-An api user should *not* need to read the source code to understand how to use it.
-You may follow the format of 'Guess a Number' for your README.
-
-###Task 3: Reflect on Your Design
-Document your design decisions by answering the following questions:
-   
-- What additional properties did you add to your models and why?
-- What were some of the trade-offs or struggles you faced when implementing the new game logic?
-
-These answers should be in a file Design.txt.
-Your responses can be in paragraph form or bulleted lists.
-This document should be around 500 words long.
        
-###Task 4: Extend Your API
+### Task 3: Extend Your API
 A well engineered backend should be extensible.
 Let's test that theory and get additional practice working with the Datastore by implementing several new endpoints.
 
@@ -106,7 +87,7 @@ Finally, these endpoints should be documented in your README just like the ones 
     ('Guess': 7, result: 'Win. Game over')].
     - Adding this functionality will require some additional properties in the 'Game' model along with a Form, and endpoint to present the data to the User.
 
-###Task 5: Improve Notifications
+### Task 4: Improve Notifications
 In the skeleton Guess a Number project, a cron job and associated handler have been created (see cron.yaml and main.py).
 This sends an hourly reminder email to every User with an email address to try out 'Guess a Number'.
 This is probably annoying the users.
@@ -114,7 +95,7 @@ This is probably annoying the users.
 Modify the SendReminderEmail handler so that this reminder email is only sent to users that have incomplete games (or some other logic that makes sense to you).
 Make sure to update the message to reflect this.
 
-Optional Improvements:
+**Optional Improvements:**
 - If you're feeling  ambitious you can implement more sophisticated notifications.
 For example: "If the User has not made a move in an active game for more than 12 hours, send a reminder email that includes the current game state." 
 - If you created a two-player game, you can implement a turn notification system!
@@ -123,3 +104,23 @@ You can use the `SendReminderEmail` handler in main.py as a template.
 Remember that you will need to pass parameters to identify the Game and User that should receive the reminder.
 Don't forget to update `app.yaml` with the new Handler listing.
 Finally, consult Google App Engine documentation for <a href="https://cloud.google.com/appengine/docs/python/taskqueue/overview-push" target="_blank">Using Push Queues in Python</a>.
+
+#### Task 5: README and API Documentation
+Be sure to document your game. Your README file should include:
+
+1. Instructions for playing the game
+2. Detailed descriptions of each endpoint
+
+Remember, you are documenting an API that another programmer may want to use as the basis for a web or mobile app.
+An api user should *not* need to read the source code to understand how to use it.
+You may follow the format of 'Guess a Number' for your README.
+
+### Reflect on Your Design
+Document your design decisions by answering the following questions:
+   
+- What additional properties did you add to your models and why?
+- What were some of the trade-offs or struggles you faced when implementing the new game logic?
+
+These answers should be in a file Design.txt.
+Your responses can be in paragraph form or bulleted lists.
+This document should be around 500 words long.
