@@ -18,7 +18,6 @@
     
 - **New Endpoints Created**
     - Meets Specification: required endpoints are implemented with behavior that follows the project description.
-    - Meets Specification: `get_game_history` is created. The output should be sufficient to 'replay' the game from start to finish and get the same result (notwithstanding any randomization inherent to the game). <todo is this redundant? does the previoius item cover this?)
     
 - **Appropriate use of HTTP Methods**
     - Meets Specification: Additional endpoints make use of appropriate HTTP methods.
