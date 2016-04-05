@@ -32,7 +32,7 @@ class GuessANumberApi(remote.Service):
     """Game API"""
     @endpoints.method(request_message=USER_REQUEST,
                       response_message=StringMessage,
-                      path='user',
+                      path='users',
                       name='create_user',
                       http_method='POST')
     def create_user(self, request):
@@ -47,7 +47,7 @@ class GuessANumberApi(remote.Service):
 
     @endpoints.method(request_message=NEW_GAME_REQUEST,
                       response_message=GameForm,
-                      path='game',
+                      path='games',
                       name='new_game',
                       http_method='POST')
     def new_game(self, request):
@@ -71,7 +71,7 @@ class GuessANumberApi(remote.Service):
 
     @endpoints.method(request_message=GET_GAME_REQUEST,
                       response_message=GameForm,
-                      path='game/{urlsafe_game_key}',
+                      path='games/{urlsafe_game_key}',
                       name='get_game',
                       http_method='GET')
     def get_game(self, request):
@@ -84,7 +84,7 @@ class GuessANumberApi(remote.Service):
 
     @endpoints.method(request_message=MAKE_MOVE_REQUEST,
                       response_message=GameForm,
-                      path='game/{urlsafe_game_key}',
+                      path='games/{urlsafe_game_key}',
                       name='make_move',
                       http_method='PUT')
     def make_move(self, request):
