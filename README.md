@@ -70,7 +70,6 @@ Finally, these endpoints should be documented in your README just like the ones 
     - Remember how you defined a score in Task 2?
     Now we will use that to generate a list of high scores in descending order, a leader-board!
     - Accept an optional parameter `number_of_results` that limits the number of results returned.
-    - Note: If you choose to implement a 2-player game this endpoint is not required.
     
  - **get_user_rankings**
     - Come up with a method for ranking the performance of each player.
