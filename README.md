@@ -73,9 +73,9 @@ Finally, these endpoints should be documented in your README just like the ones 
     - Note: If you choose to implement a 2-player game this endpoint is not required.
     
  - **get_user_rankings**
-    - Come up with a method for ranking the performance of each player.
-      For "Guess a Number" this could be by winning percentage with ties broken by the average number of guesses.
-    - Create an endpoint that returns this player ranking. The results should include each Player's name and the 'performance' indicator (eg. win/loss ratio).
+    - First, come up with a metric for ranking players.
+     - For "Guess a Number" this could be by winning percentage with ties broken by the average number of guesses.
+    - Then create an endpoint called `get_user_rankings` that returns all players ranked by performance. The results should include each Player's name and the 'performance' indicator (eg. win/loss ratio).
  
  - **get_game_history**
     - Your API Users may want to be able to see a 'history' of moves for each game.
