@@ -86,7 +86,7 @@ class GuessANumberApi(remote.Service):
                       response_message=GameForm,
                       path='game/{urlsafe_game_key}',
                       name='make_move',
-                      http_method='PUT')
+                      http_method='POST')
     def make_move(self, request):
         """Makes a move. Returns a game state with message"""
         game = get_by_urlsafe(request.urlsafe_game_key, Game)
